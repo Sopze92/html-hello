@@ -1,0 +1,121 @@
+html, body{
+    background: #000;
+    margin: 0;
+}
+
+.page {
+    background: #000;
+    box-sizing: border-box;
+    display: flex;
+    margin: 0;
+    padding: 100px;
+    width: 100%;
+}
+
+/* -------------------------------------------- POST */
+
+.ig-post{
+    font-family: roboto;
+    font-weight: 400;
+    margin: auto;
+    background: #FFFFFF;
+    width: 720px;
+}
+
+.ig-post a { text-decoration: none; color:#000; font-weight: 700; }
+.ig-post a:hover { text-shadow: 0 0 8px rgba(0, 0, 0, 0.4); }
+
+/* -------------------------------------------- POST HEADER */
+
+.ig-post .post-header {
+    display: flex;
+    padding: 22px 14px;
+}
+
+/* TITLE WRAPPER */
+
+.post-header .ph-titlewrapper {
+    display: flex;
+    font-size: 22px;
+    text-decoration: none;
+    color: #000;
+}
+
+.ph-titlewrapper .pht-icon {
+    width: 48px;
+    height: 48px;
+    margin-top: 4px;
+}
+
+.ph-titlewrapper .pht-names *{
+    display: block;
+    padding-left: 10px;
+}
+
+.ph-titlewrapper .pht-author { font-weight: 400; }
+
+/* MENU BUTTON */
+
+.post-header .pht-menu {
+    margin: auto;
+    margin-right: 0px;
+    width: 32px;
+    height: 48px;
+    background: url("./.assets/posticon_menu.png");
+    background-position-x: center;
+}
+
+/* -------------------------------------------- POST THUMBNAIL */
+
+.ig-post .post-thumbnail {
+    width: 720px;
+    overflow: hidden;
+}
+
+.post-thumbnail .pt-image {
+    width: 100%;
+}
+
+/* -------------------------------------------- POST CONTENT */
+
+.ig-post .post-content {
+    font-size: 22px;
+    padding: 14px;
+}
+
+/* INTERACTIONS ROW */
+
+.post-content .pc-interactions{
+    display: flex;
+    height: 64px;
+}
+
+.pc-interactions .pci-icon{
+    width: 64px;
+    height: 64px;
+    scale: 1.0; 
+    translate: 0 0 0;
+    transition: scale 0.25s, translate 0.125s;
+    user-select: none;
+}
+
+.pc-interactions .pci-icon.pci-icon-right{ margin: auto; margin-right: 8px;}
+
+.pc-interactions .pci-icon:hover{ scale: 1.125; translate: 0 -4px 0; transition: scale 0.25s, translate 0.125s; }
+.pc-interactions .pci-icon:active{ scale: .95; translate: 0 -2px 0; transition: scale 0.025s, translate 0.025s; }
+
+.pci-icon > img { position: absolute; top: 0; left: 0 }
+.pci-icon > img:last-child{ opacity: 0.0; transition: opacity 0.25s; }
+.pci-icon:hover > img:last-child{ opacity: 1.0; transition: opacity 0.25s; }
+
+/* INLINE FEEDBACK */
+
+.post-content .pc-inline-feedback {
+    margin: 40px 6px 20px 6px;
+}
+
+/* DESCRIPTION */
+
+.post-content .pc-description {
+    margin: 20px 6px;
+}
