@@ -1,15 +1,20 @@
-/* Couldn't find a way to change Bootstrap fonts without generating and downloading a custom version, so here is an ugly workaround */
-p, button, input, label, h1, h2, h3, h4, h5, h6, span, a, ul, li { font-family: 'Roboto', sans-serif !important; text-shadow: 0 0 1px; }
 
-img { user-select: none; pointer-events: none; }
+/* width limit with of credit-card brand box*/
+.fb-brand-container { min-width: fit-content; }
 
-/* haven't found any close-looking outline in bootstrap for modal tool buttons (camera/location) */
-.AAA-btn-outline { outline: solid 1px #DDD; }
+/* I dont like placeholders being the same text color as actual value */
+input::placeholder { color: var(--bs-dark-bg-subtle) !important; }
 
- /* tab button icons via Google Icons, using actual Bootstrap colors */
-.AAA-google-icon { color: var(--bs-secondary); font-family: 'Material Symbols Outlined' !important; user-select: none; }
-.AAA-google-icon:hover { color: var(--bs-dark); }
-.AAA-google-icon:active, .AAA-google-icon.active { color: var(--bs-primary); }
+/* didn't wanted validation to notify the valid ones in green so I wrote custom validation styles */
 
-.AAA-google-icon-hollow { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-.AAA-google-icon-fill { font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+/* main invalid infobox */
+.fv-invalid-feedback { display: none; }
+.fv-invalid .fv-invalid-feedback{ display: block; }
+.fb-invalid-box {
+  background: var(--bs-danger-bg-subtle);
+  color: var(--bs-danger-text-emphasis);
+  border: 1px solid var(--bs-danger-border-subtle);
+}
+
+/* missing fields border */
+.fv-invalid .fiv-invalid-check:invalid { border-color: var(--bs-danger); }
